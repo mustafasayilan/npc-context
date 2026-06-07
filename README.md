@@ -4,6 +4,20 @@ Local, low-token context for AI coding agents.
 
 NPC Context helps tools such as Codex and Claude Code start from a small, task-specific map of your repository instead of broadly reading files first. It indexes local files, git state, dependency manifests, routes, symbols, and task terms, then writes a compact `.npc-context/task-context.md` file for the agent to read before development work.
 
+## Benchmark Snapshot
+
+```text
+Small sample:        79.0% estimated token reduction
+Realistic SaaS test: 89.2% average estimated token reduction
+Range:               84.2% to 97.4%
+```
+
+Token counts are local estimates for comparing broad repository scanning with NPC Context output. They are not provider billing guarantees. See [docs/benchmarks.md](docs/benchmarks.md).
+
+## Support
+
+If NPC Context saves you time or token budget, sponsor ongoing development. The repository is prepared with `.github/FUNDING.yml`; enable GitHub Sponsors for `mustafasayilan` to activate the GitHub Sponsor button.
+
 This project is not affiliated with OpenAI, Anthropic, or their products. Codex and Claude Code are mentioned only as supported agent targets.
 
 ## Why
@@ -158,7 +172,7 @@ Average estimated savings: 89.2%
 Range: 84.2% to 97.4%
 ```
 
-The exact result can vary as the scanner improves. Token counts are local estimates, not billing guarantees. See [docs/benchmarks.md](docs/benchmarks.md).
+The exact result can vary as the scanner improves. Token counts are local estimates, not billing guarantees.
 
 ## Minimum Requirements
 
