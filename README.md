@@ -16,7 +16,11 @@ Token counts are local estimates for comparing broad repository scanning with NP
 
 ## Support
 
-If NPC Context saves you time or token budget, sponsor ongoing development. The repository is prepared with `.github/FUNDING.yml`; enable GitHub Sponsors for `mustafasayilan` to activate the GitHub Sponsor button.
+If NPC Context saves you time or token budget, sponsor ongoing development.
+
+Donation receiving is not automatic. The repository includes `.github/FUNDING.yml`, but the maintainer must also enable GitHub Sponsors for `mustafasayilan`, create sponsorship tiers, and submit payout, bank, and tax information in GitHub/Stripe. Until that onboarding is complete, the Sponsor button may not accept payments.
+
+See [Funding setup](docs/funding.md).
 
 This project is not affiliated with OpenAI, Anthropic, or their products. Codex and Claude Code are mentioned only as supported agent targets.
 
@@ -218,6 +222,7 @@ You may fork, modify, and redistribute the code under the license terms, but you
 
 - [Architecture](docs/architecture.md)
 - [Benchmarks](docs/benchmarks.md)
+- [Funding setup](docs/funding.md)
 - [Minimum requirements](docs/minimum-requirements.md)
 - [Release process](docs/release.md)
 - [Turkish summary](docs/tr.md)
