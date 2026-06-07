@@ -18,7 +18,9 @@ Token counts are local estimates for comparing broad repository scanning with NP
 
 If NPC Context saves you time or token budget, sponsor ongoing development.
 
-Donation receiving is not automatic. The repository includes `.github/FUNDING.yml`, but the maintainer must also enable GitHub Sponsors for `mustafasayilan`, create sponsorship tiers, and submit payout, bank, and tax information in GitHub/Stripe. Until that onboarding is complete, the Sponsor button may not accept payments.
+[Sponsor this project on GitHub](https://github.com/sponsors/mustafasayilan).
+
+The repository includes `.github/FUNDING.yml`, so GitHub can show the Sponsor button for this project. Payouts are handled through the maintainer's approved GitHub Sponsors profile.
 
 See [Funding setup](docs/funding.md).
 
