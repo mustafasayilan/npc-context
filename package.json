@@ -14,7 +14,7 @@
     "url": "https://github.com/mustafasayilan/npc-context/issues"
   },
   "bin": {
-    "npc-context": "./dist/cli.js"
+    "npc-context": "dist/cli.js"
   },
   "files": [
     "dist",
