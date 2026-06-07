@@ -29,4 +29,6 @@ npc-context install --global --agent both
 
 Token rakamlari yaklasik yerel tahminlerdir. Fatura garantisi degildir.
 
+GitHub Sponsors profili kullanici hesabina baglidir; her repo icin ayri profil acilmaz. Bu repo `.github/FUNDING.yml` ile maintainer sponsor profiline baglanir.
+
 Bu arac garanti olmadan, oldugu gibi sunulur. Kullanmadan once uretilen dosyalari ve agent degisikliklerini inceleyin.

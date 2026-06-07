@@ -1,8 +1,10 @@
 # VamaoLabs NPC Context
 
-Local, low-token context for AI coding agents.
+A small local context preflight for AI coding agents.
 
-NPC Context helps tools such as Codex and Claude Code start from a small, task-specific map of your repository instead of broadly reading files first. It indexes local files, git state, dependency manifests, routes, symbols, and task terms, then writes a compact `.npc-context/task-context.md` file for the agent to read before development work.
+I built NPC Context because coding agents often spend their first turn doing the same noisy repository discovery: list files, open broad docs, inspect manifests, then slowly narrow down. This CLI does that first pass locally and writes a compact `.npc-context/task-context.md` file that Codex, Claude Code, or another agent can read before touching the project.
+
+It looks at safe text/source candidates, git state, dependency manifests, routes, symbols, imports, and the task prompt. It does not call model APIs, and context generation should not change application behavior.
 
 ## Benchmark Snapshot
 
@@ -16,11 +18,11 @@ Token counts are local estimates for comparing broad repository scanning with NP
 
 ## Support
 
-If NPC Context saves you time or token budget, sponsor ongoing development.
+If this project, or other open source work from Mustafa/VamaoLabs, saves you time, sponsorship helps keep maintenance moving.
 
-[Sponsor this project on GitHub](https://github.com/sponsors/mustafasayilan).
+[Sponsor Mustafa on GitHub](https://github.com/sponsors/mustafasayilan).
 
-The repository includes `.github/FUNDING.yml`, so GitHub can show the Sponsor button for this project. Payouts are handled through the maintainer's approved GitHub Sponsors profile.
+The repository includes `.github/FUNDING.yml`, so GitHub can show the Sponsor button here. The GitHub Sponsors profile is account-level, not a separate profile for each repository. Payouts are handled through the maintainer's approved GitHub Sponsors profile.
 
 See [Funding setup](docs/funding.md).
 
@@ -28,7 +30,7 @@ This project is not affiliated with OpenAI, Anthropic, or their products. Codex 
 
 ## Why
 
-AI coding agents often spend context on broad repository discovery. NPC Context moves the first pass local:
+The main idea is simple: give the agent a useful map before it starts reading files. NPC Context keeps that map intentionally small:
 
 - scans only safe text/source candidates
 - ignores dependency, build, cache, generated, binary, and large files
@@ -178,7 +180,7 @@ Average estimated savings: 89.2%
 Range: 84.2% to 97.4%
 ```
 
-The exact result can vary as the scanner improves. Token counts are local estimates, not billing guarantees.
+The exact result can vary as the scanner changes. These numbers are meant for regression checks and rough comparison, not for claiming a guaranteed bill reduction.
 
 ## Minimum Requirements
 

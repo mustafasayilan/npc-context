@@ -1,6 +1,6 @@
 # Benchmarks
 
-NPC Context includes a local benchmark command:
+NPC Context includes a local benchmark command. I use it as a sanity check while changing the scanner, not as a promise about anyone's API bill:
 
 ```bash
 npc-context benchmark --prompt "add a simple settings panel" --root .
@@ -18,7 +18,7 @@ It writes:
 .npc-context/benchmark-results.md
 ```
 
-## Repeatable Sample
+## Small Fixture
 
 After building:
 
@@ -26,7 +26,7 @@ After building:
 npm run benchmark:sample
 ```
 
-Current sample result:
+Current result on the included fixture:
 
 ```text
 Prompt: add a simple settings panel
@@ -37,7 +37,7 @@ NPC Context estimated tokens: 341
 Estimated savings: 79.0%
 ```
 
-The included fixture is still small enough for fast tests. Larger real repositories can show larger or smaller percentage reductions depending on task specificity, repository layout, and how much unrelated source exists.
+The fixture is intentionally small so it can run quickly in CI and local smoke tests. Real repositories can show larger or smaller reductions depending on task specificity, repository layout, and how much unrelated source exists.
 
 ## Realistic Synthetic Suite
 
@@ -64,11 +64,11 @@ Per-prompt results:
 | update webhook retry handling | 68 | 20 | 8,141 | 1,288 | 84.2% |
 | add permission audit export | 68 | 20 | 8,141 | 1,210 | 85.1% |
 
-This suite is generated locally by `scripts/benchmark-realistic.mjs`. It models a multi-domain TypeScript SaaS repository with feature services, API route files, tests, and docs. It is not a replacement for benchmarking on a real private codebase, but it is a more realistic regression test than the tiny sample fixture.
+This suite is generated locally by `scripts/benchmark-realistic.mjs`. It models a multi-domain TypeScript SaaS repository with feature services, API route files, tests, and docs. It is still synthetic, but it gives the ranker more noise to work against than the small fixture.
 
 ## Important Limits
 
-These numbers are estimates. They are useful for comparing broad local scan size with NPC Context output size, but they are not provider billing guarantees.
+These numbers are estimates. They compare broad local scan size with NPC Context output size. They are not provider billing guarantees.
 
 Actual token use depends on:
 

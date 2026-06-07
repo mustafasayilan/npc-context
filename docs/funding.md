@@ -1,8 +1,10 @@
-# Funding Setup
+# Funding
 
-This repository is configured for donations through GitHub Sponsors.
+This repository points to the maintainer's GitHub Sponsors profile.
 
-## Current Repository Setup
+GitHub Sponsors profiles are tied to a user or organization account. They are not created separately for every repository. Individual repositories can still show a Sponsor button by including a funding file.
+
+## Repository Setup
 
 The repository includes:
 
@@ -20,15 +22,15 @@ The maintainer profile is public at:
 https://github.com/sponsors/mustafasayilan
 ```
 
-## How Donations Reach the Maintainer
+## How Sponsorships Reach the Maintainer
 
 The `mustafasayilan` GitHub Sponsors profile has been approved and is public. Sponsors can use the repository Sponsor button or the profile URL above.
 
 GitHub pays out sponsorships through the payout account configured in the maintainer's GitHub Sponsors settings. Bank, tax, and Stripe Connect details are managed privately inside GitHub/Stripe, not in this repository.
 
-## What Codex Cannot Do
+## Private Account Settings
 
-Codex cannot manage payout, bank, tax, identity, or Stripe Connect details because those are private account settings.
+Payout, bank, tax, identity, and Stripe Connect details are private account settings. They should be managed inside GitHub and Stripe, not documented or automated in this repository.
 
 ## Optional Alternatives
 
