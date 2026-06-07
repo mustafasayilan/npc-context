@@ -137,6 +137,7 @@ Run:
 ```bash
 npm run build
 npm run benchmark:sample
+npm run benchmark:realistic
 ```
 
 Example result on the included sample repository:
@@ -147,6 +148,14 @@ Selected files: 4
 Baseline estimated tokens: 1,627
 NPC Context estimated tokens: 341
 Estimated savings: 79.0%
+```
+
+Realistic synthetic suite result:
+
+```text
+Repository shape: 16 domains, 68 candidate files, 5 prompts
+Average estimated savings: 89.2%
+Range: 84.2% to 97.4%
 ```
 
 The exact result can vary as the scanner improves. Token counts are local estimates, not billing guarantees. See [docs/benchmarks.md](docs/benchmarks.md).

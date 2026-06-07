@@ -20,6 +20,7 @@
     "dist",
     "docs",
     "scripts",
+    "tests/fixtures",
     "CHANGELOG.md",
     "DISCLAIMER.md",
     "README.md",
@@ -33,7 +34,8 @@
     "test": "node --test tests/*.test.mjs",
     "check": "npm run build && npm test",
     "benchmark:sample": "node scripts/benchmark-sample.mjs",
-    "prepare": "npm run build"
+    "benchmark:realistic": "node scripts/benchmark-realistic.mjs",
+    "prepack": "npm run build"
   },
   "engines": {
     "node": ">=18.18"

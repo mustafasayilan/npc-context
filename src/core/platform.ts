@@ -1,5 +1,5 @@
 import { spawn } from "node:child_process";
-import { access, mkdir } from "node:fs/promises";
+import { access, mkdir, rm, writeFile } from "node:fs/promises";
 import { constants } from "node:fs";
 import { delimiter } from "node:path";
 import { homedir } from "node:os";
@@ -28,10 +28,14 @@ export async function ensureParent(path: string): Promise<void> {
 }
 
 export async function canWrite(path: string): Promise<boolean> {
+  const root = resolve(path);
+  const probe = join(root, `.npc-context-write-test-${Date.now()}-${Math.random().toString(16).slice(2)}`);
   try {
-    await access(path, constants.W_OK);
+    await writeFile(probe, "ok", "utf8");
+    await rm(probe, { force: true });
     return true;
   } catch {
+    await rm(probe, { force: true }).catch(() => undefined);
     return false;
   }
 }

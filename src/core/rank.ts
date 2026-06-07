@@ -79,11 +79,22 @@ export function selectRelevantFiles(
 ): FileSummary[] {
   const changed = new Set(changedFiles.map((file) => file.replace(/\\/g, "/")));
   const untracked = new Set(untrackedFiles.map((file) => file.replace(/\\/g, "/")));
-  const ranked = [...files].sort((a, b) => {
-    const scoreDelta = scoreFile(b, terms, changed, untracked) - scoreFile(a, terms, changed, untracked);
-    return scoreDelta || a.path.localeCompare(b.path);
+  const scored = files.map((file) => ({
+    file,
+    score: scoreFile(file, terms, changed, untracked)
+  }));
+  const ranked = scored.sort((a, b) => {
+    const scoreDelta = b.score - a.score;
+    return scoreDelta || a.file.path.localeCompare(b.file.path);
   });
-  const selected = ranked.filter((file) => scoreFile(file, terms, changed, untracked) > 0).slice(0, maxFiles);
+  const bestScore = ranked[0]?.score ?? 0;
+  const threshold = bestScore >= 20 ? Math.max(4, Math.floor(bestScore * 0.25)) : 1;
+  const selected = ranked
+    .filter((entry) => entry.score >= threshold)
+    .map((entry) => entry.file)
+    .slice(0, maxFiles);
   if (selected.length > 0) return selected;
-  return ranked.slice(0, Math.min(maxFiles, 14));
+  return ranked
+    .map((entry) => entry.file)
+    .slice(0, Math.min(maxFiles, 14));
 }
