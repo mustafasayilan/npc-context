@@ -1,0 +1,21 @@
+node_modules/
+dist/
+coverage/
+.turbo/
+.npm/
+
+.npc-context/
+.codex-npc/
+
+*.log
+*.tgz
+
+# VamaoLabs NPC Context
+.ai/cache/
+.ai/vector-db/
+.ai/task-context/
+.ai/memory/
+.ai/index/
+.ai/generated/
+.ai/tmp/
+.ai/*.local.*

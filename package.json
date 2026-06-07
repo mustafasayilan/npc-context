@@ -1,0 +1,57 @@
+{
+  "name": "@vamaolabs/npc-context",
+  "version": "0.1.0",
+  "description": "A local low-token context layer for AI coding agents such as Codex and Claude Code.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "VamaoLabs",
+  "homepage": "https://github.com/mustafasayilan/npc-context#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafasayilan/npc-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mustafasayilan/npc-context/issues"
+  },
+  "bin": {
+    "npc-context": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "scripts",
+    "CHANGELOG.md",
+    "DISCLAIMER.md",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "SECURITY.md",
+    "TRADEMARKS.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test",
+    "benchmark:sample": "node scripts/benchmark-sample.mjs",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "codex",
+    "claude-code",
+    "context",
+    "low-token",
+    "cli"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
