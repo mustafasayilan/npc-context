@@ -9,7 +9,7 @@ VamaoLabs NPC Context - это локальный слой контекста с
 Из GitHub:
 
 ```bash
-npm install -g mustafasayilan/npc-context
+npm install -g https://github.com/mustafasayilan/npc-context/archive/refs/heads/main.tar.gz
 ```
 
 ## Использование

@@ -9,7 +9,7 @@ Amaci agent'in tum repoyu bastan okumasi yerine once kucuk ve goreve odakli bir 
 GitHub uzerinden:
 
 ```bash
-npm install -g mustafasayilan/npc-context
+npm install -g https://github.com/mustafasayilan/npc-context/archive/refs/heads/main.tar.gz
 ```
 
 ## Kullanim

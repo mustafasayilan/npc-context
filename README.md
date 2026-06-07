@@ -21,7 +21,7 @@ AI coding agents often spend context on broad repository discovery. NPC Context 
 From GitHub:
 
 ```bash
-npm install -g mustafasayilan/npc-context
+npm install -g https://github.com/mustafasayilan/npc-context/archive/refs/heads/main.tar.gz
 ```
 
 After npm publication:
@@ -33,7 +33,7 @@ npm install -g @vamaolabs/npc-context
 Run without global install:
 
 ```bash
-npx github:mustafasayilan/npc-context doctor
+npx --yes https://github.com/mustafasayilan/npc-context/archive/refs/heads/main.tar.gz doctor
 ```
 
 ## Quick Start
