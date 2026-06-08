@@ -22,11 +22,14 @@
     "scripts",
     "tests/fixtures",
     "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
     "DISCLAIMER.md",
     "README.md",
     "LICENSE",
     "NOTICE",
     "SECURITY.md",
+    "SUPPORT.md",
     "TRADEMARKS.md"
   ],
   "scripts": {

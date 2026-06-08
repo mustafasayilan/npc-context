@@ -1,0 +1,81 @@
+name: Bug report
+description: Report something that is broken or confusing.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please keep examples small and remove private code, tokens, and secrets.
+  - type: input
+    id: version
+    attributes:
+      label: NPC Context version
+      description: Run `npc-context --version` if available, or share the git commit / install source.
+      placeholder: "0.1.0"
+    validations:
+      required: false
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: Install method
+      options:
+        - npm global
+        - npx / direct GitHub install
+        - local clone
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - WSL
+        - macOS
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent target
+      options:
+        - Codex
+        - Claude Code
+        - both
+        - generic / other
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: Paste the command that caused the issue.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: Include the short error output if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra context
+      description: Project shape, shell, terminal, or anything else that may help.
+    validations:
+      required: false
+

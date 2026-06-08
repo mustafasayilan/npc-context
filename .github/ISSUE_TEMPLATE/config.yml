@@ -1,0 +1,9 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/mustafasayilan/npc-context/discussions
+    about: Use Discussions for setup questions, rough ideas, and general feedback.
+  - name: Security reports
+    url: https://github.com/mustafasayilan/npc-context/security/advisories/new
+    about: Please report security issues privately.
+

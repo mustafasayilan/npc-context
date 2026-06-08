@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest a focused improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. The most useful requests explain the workflow, not only the desired command or flag.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What becomes slow, noisy, or hard without this change?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What would you like VamaoLabs NPC Context to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - CLI command
+        - context ranking
+        - Codex setup
+        - Claude Code setup
+        - documentation
+        - benchmark
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Any workaround or different approach you already tried.
+    validations:
+      required: false
+
